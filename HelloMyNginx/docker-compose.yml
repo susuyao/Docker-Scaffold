@@ -1,0 +1,12 @@
+version: '2'
+
+
+services:
+
+    susu:
+      image: nginx
+      ports:
+        - "80:80"
+      volumes:
+        - ./data/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+        - ./data/webroot/:/webroot/:ro
